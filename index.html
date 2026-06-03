@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaldea Channel-迦勒底频道</title>
+    
+    <!-- 设置网站图标（favicon） -->
+    <link rel="icon" type="image/png" href="images/迦勒底.png">
+    <link rel="shortcut icon" type="image/png" href="images/迦勒底.png">
+    
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="css/web.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        body {
+            background-color: #ffffff;
+            padding: 0;
+            margin: 0;
+            display: block;
+            overflow-x: hidden;
+        }
+
+        .top-blue-bar {
+            width: 100%;
+            height: 90px; /* 修改：从60px增加到90px，避免图片溢出 */
+            background-color: rgb(58, 159, 253);
+            margin: 0;
+            padding: 0;
+            border: none;
+            display: block;
+            position: relative;
+        }
+        
+        /* 修复图片高度和定位 */
+        .logo-img {
+            height: 70px;
+            width: 70px;
+            display: block;
+            object-fit: contain; /* 保证图片比例 */
+        }
+
+        /* 优化移动端显示 */
+        @media (max-width: 768px) {
+            .channel-name {
+                font-size: 20px !important;
+            }
+            .nav-link {
+                font-size: 14px !important;
+            }
+            .nav-left {
+                gap: 8px !important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-blue-bar">
+        <!-- 左侧图片 -->
+        <div class="nav-left">
+            <img src="images/迦勒底.png" alt="迦勒底" class="logo-img">
+            <span class="channel-name">Chaldea Official Channel</span>
+        </div>
+        <!-- 右侧登录注册 -->
+        <div class="nav-right">
+            <a href="#" class="nav-link">登录</a>
+            <a href="#" class="nav-link">注册</a>
+        </div>
+    </div>
+
+    <!-- 滚动报幕区域 -->
+    <div class="news-ticker">
+        <div class="ticker-container">
+            <div class="ticker-content" id="tickerContent">
+                <span class="news-item">📢 迦勒底频道正式上线！感谢各位从者和御主的支持！</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">近日，御主藤丸立香昏迷在床上，其从者皆来探望，等御主醒来时竞在其枕边意外发现一个圣杯，御主表示我不到发生了什么</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">5月上旬，阿拉什、诸葛孔明和卡斯特因过度劳累而病倒，再次提醒广大从者们要注意身体</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">所长奥尔加玛丽、浅上藤乃、紫苑等人在特异点举行了炙烤蘑菇宴会，感兴趣的从者们可联系：11110000</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">爱尔奎特与希耶尔因小事在食堂争执了起来，饭堂员工卫宫好不容易劝阻了二人，事后希耶尔开心地吃起了咖喱并分享给爱尔奎特，爱尔奎特却言："我不吃咖喱。"双方再起了争执。</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">5月中旬，莉莉丝和玛修起了争执，二人在灵子模拟室打的不相上下，最后因莉莉丝一直用言语挑衅玛修，被玛修一个光炮打飞了</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">去年12月起，迦勒底各处出现许多类似猫的生物，形象酷似爱尔奎特，但爱尔奎特表示："欸~ 完全不知道这是什么生物呢 不过确实和我相像"经过迦勒底的一番调查，确认该生物名为喵姬</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">达芬奇亲提醒您，一定要小心网站上来路不明的商品销售信息，以免造成损失！</span>
+                <span class="news-separator">✦</span>
+                <span class="news-item">听闻最近出现的特异点里有死徒出现，希耶尔干劲满满地赶往特异点，但似乎没发现死徒的踪迹。据本人说："我只记得到达之后不小心碾碎了什么东西，原来那个就是死徒吗？"</span>
+                <span class="news-separator">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 轮播图和功能块行容器 -->
+    <div class="content-row">
+        <!-- 轮播图区域 -->
+        <div class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="carouselWrapper">
+                    <div class="carousel-slide">
+                        <img src="images/轮换_直播.png" alt="直播间">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/轮换_旅游.png" alt="玛修">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- 功能矩形块区域 -->
+        <div class="feature-grid">
+            <div class="feature-item feature-green">
+                <div class="weather-text">
+                    <div class="weather-title">今日天气</div>
+                    <div class="weather-info">☀️ 晴</div>
+                </div>
+            </div>
+            <div class="feature-item feature-blue">
+                <div class="zhanbu-text">
+                    <div class="weather-title">今日占卜</div>
+                    <div class="weather-info">千万不要穿蓝色衣服</div>
+                </div>
+            </div>
+            <div class="feature-item feature-yellow">今日所有商品7折起！</div>
+            <div class="feature-item feature-black">当前热门帖子：《只是有点、有点在意的人》</div>
+        </div>  <!-- ← 这里要闭合 feature-grid -->
+    </div>  <!-- ← 这里要闭合 content-row -->
+
+
+    <!-- 迦勒底作战任务板块（可折叠） -->
+    <div class="mission-board">
+        <!-- 折叠按钮区域 - 始终可见 -->
+        <div class="mission-collapse-header" id="missionHeader">
+            <div class="mission-preview">
+                <div class="preview-left">
+                    <span class="mission-icon">⚔️</span>
+                    <div class="preview-info">
+                        <div class="preview-title">当前特异点</div>
+                        <div class="preview-name">落泪之翼</div>
+                    </div>
+                </div>
+                <div class="preview-center">
+                    <div class="preview-progress">
+                        <span class="progress-text">任务进度</span>
+                        <div class="progress-bar-small">
+                            <div class="progress-fill-small" style="width: 45%;"></div>
+                        </div>
+                        <span class="progress-percent">45%</span>
+                    </div>
+                </div>
+                <div class="preview-right">
+                    <div class="preview-suitability">
+                        <span class="suitability-icon">⭐</span>
+                        <span class="suitability-text">从者适性：<strong>【龙】属性</strong></span>
+                    </div>
+                    <div class="collapse-icon" id="collapseIcon">▼</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 详细内容 - 默认隐藏 -->
+        <div class="mission-detail" id="missionDetail">
+            <div class="mission-content">
+                <!-- 左侧：特异点信息 -->
+                <div class="mission-info">
+                    <div class="info-card">
+                        <div class="info-label">📌 当前特异点</div>
+                        <div class="info-value special-name">落泪之翼</div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-card half">
+                            <div class="info-label">📍 发生地点</div>
+                            <div class="info-value">迦勒底亚斯 · 北美大陆（修正后）</div>
+                        </div>
+                        <div class="info-card half">
+                            <div class="info-label">⏰ 发生时间</div>
+                            <div class="info-value">A.D. 2024 · 特异点F之后</div>
+                        </div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-card half">
+                            <div class="info-label">📅 任务持续时间</div>
+                            <div class="info-value">2024.05.25 - 2024.06.08</div>
+                        </div>
+                        <div class="info-card half">
+                            <div class="info-label">⚠️ 危险等级</div>
+                            <div class="info-value danger-level">EX ⚡⚡⚡</div>
+                        </div>
+                    </div>
+                    <div class="info-card full">
+                        <div class="info-label">📝 任务概要</div>
+                        <div class="info-value">观测到未知的特异点波动，疑似与失落之翼有关。该特异点中出现了大量【龙】属性的敌人，需要优先编入具备龙属性特攻的从者。</div>
+                    </div>
+                </div>
+                
+                <!-- 右侧：从者适性 -->
+                <div class="mission-suitability">
+                    <div class="suitability-title">⭐ 从者适性分析 ⭐</div>
+                    <div class="suitability-content">
+                        <div class="suitability-tag recommend">
+                            <span class="tag-icon">✅</span>
+                            <span class="tag-text">优先推荐</span>
+                            <span class="tag-desc">持有【龙】属性的从者</span>
+                        </div>
+                        <div class="suitability-list">
+                            <div class="servant-item">
+                                <div class="servant-icon">🐉</div>
+                                <div class="servant-name">阿尔托莉雅</div>
+                                <div class="servant-reason">龙属性 + 对龙特攻</div>
+                            </div>
+                            <div class="servant-item">
+                                <div class="servant-icon">🦕</div>
+                                <div class="servant-name">齐格飞</div>
+                                <div class="servant-reason">对龙特攻（屠龙者）</div>
+                            </div>
+                            <div class="servant-item">
+                                <div class="servant-icon">⚔️</div>
+                                <div class="servant-name">莫德雷德</div>
+                                <div class="servant-reason">龙属性 + 高爆发</div>
+                            </div>
+                            <div class="servant-item">
+                                <div class="servant-icon">🏹</div>
+                                <div class="servant-name">伊丽莎白</div>
+                                <div class="servant-reason">龙属性 + 辅助能力</div>
+                            </div>
+                        </div>
+                        <div class="suitability-warning">
+                            <span class="warning-icon">⚠️</span>
+                            <span class="warning-text">注意：本次任务禁止编入【兽】属性从者，可能会引发不可预知的反应。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 进度条 -->
+            <div class="mission-progress">
+                <div class="progress-label">任务完成度</div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 45%;"></div>
+                </div>
+                <div class="progress-stats">
+                    <span>已完成：45%</span>
+                    <span>剩余：55%</span>
+                    <span>预计剩余时间：7天</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    </div>
+    
+    <!-- Amazones 特别配送服务横框 -->
+    <!-- 红色大横框 -->
+    <div class="red-bar">
+        <div class="red-bar-text">🏪 Amazones 特别配送服务</div>
+    </div>
+
+    <!-- 👇 美食外卖选购区域 👇 -->
+    <div class="food-menu">
+        <div class="food-menu-title">🍱 今日推荐美食 🍜</div>
+        
+        <!-- 第一行：左边大图 + 右边两个小图 -->
+        <div class="food-row food-row-first">
+            <!-- 左边大图：特辣麻婆豆腐 -->
+            <div class="food-card food-card-large">
+                <img src="images/特辣麻婆豆腐.png" alt="特辣麻婆豆腐">
+                <div class="food-info">
+                    <div class="food-name">🔥 特辣麻婆豆腐</div>
+                    <div class="food-price">￥28 <span class="food-origin-price">￥38</span></div>
+                    <button class="order-btn">加入购物车</button>
+                </div>
+            </div>
+            
+            <!-- 右边两个小图 -->
+            <div class="food-small-group">
+                <div class="food-card food-card-small">
+                    <img src="images/樱的特制便当.png" alt="樱的特制便当">
+                    <div class="food-info">
+                        <div class="food-name">🌸 樱的特制便当</div>
+                        <div class="food-price">￥35</div>
+                        <button class="order-btn">加入购物车</button>
+                    </div>
+                </div>
+                <div class="food-card food-card-small">
+                    <img src="images/再普通不过的咖喱.png" alt="再普通不过的咖喱">
+                    <div class="food-info">
+                        <div class="food-name">🍛 再普通不过的咖喱</div>
+                        <div class="food-price">￥22</div>
+                        <button class="order-btn">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第二行：三个均匀排列的商品 -->
+        <div class="food-row food-row-second">
+            <div class="food-card food-card-medium">
+                <img src="images/深夜的一碗.png" alt="深夜的一碗">
+                <div class="food-info">
+                    <div class="food-name">🌙 深夜的一碗</div>
+                    <div class="food-price">￥25</div>
+                    <button class="order-btn">加入购物车</button>
+                </div>
+            </div>
+            <div class="food-card food-card-medium">
+                <img src="images/巧克力豆蜜瓜面包.png" alt="巧克力豆蜜瓜面包">
+                <div class="food-info">
+                    <div class="food-name">🍫🍈 巧克力豆蜜瓜面包</div>
+                    <div class="food-price">￥18</div>
+                    <button class="order-btn">加入购物车</button>
+                </div>
+            </div>
+            <!-- 第三个位置可以留空或添加占位，或者再添加一个商品 -->
+            <div class="food-card food-card-medium food-placeholder">
+                <div class="coming-soon">
+                    <span>📦</span>
+                    <p>更多商品<br>即将上架</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- 👇 日常用品购买区域 👇 -->
+    <div class="daily-goods">
+        <div class="daily-goods-title">🛒 日常用品商店 🛍️</div>
+        
+        <!-- 第一行：左边大图 -->
+        <div class="daily-row daily-row-first">
+            <!-- 左边大图：出发活动写真馆 -->
+            <div class="daily-card daily-card-large">
+                <img src="images/出发活动写真馆.png" alt="出发活动写真馆">
+                <div class="daily-info">
+                    <div class="daily-name">🎬 出发活动写真馆</div>
+                    <div class="daily-desc">珍藏版活动记录，限时发售</div>
+                    <div class="daily-price">￥88 <span class="daily-origin-price">￥128</span></div>
+                    <button class="daily-order-btn">加入购物车</button>
+                </div>
+            </div>
+            
+            <!-- 右边三个小图（竖向排列） -->
+            <div class="daily-small-group">
+                <div class="daily-card daily-card-small">
+                    <img src="images/冻得硬邦邦的运动饮料.png" alt="冻得硬邦邦的运动饮料">
+                    <div class="daily-info">
+                        <div class="daily-name">🧊 冻得硬邦邦的运动饮料</div>
+                        <div class="daily-price">￥12</div>
+                        <button class="daily-order-btn">加入购物车</button>
+                    </div>
+                </div>
+                <div class="daily-card daily-card-small">
+                    <img src="images/金眼神莺.png" alt="金眼神莺">
+                    <div class="daily-info">
+                        <div class="daily-name">🦅 金眼神莺</div>
+                        <div class="daily-price">￥45</div>
+                        <button class="daily-order-btn">加入购物车</button>
+                    </div>
+                </div>
+                <div class="daily-card daily-card-small">
+                    <img src="images/美丽而虚缈之花.png" alt="美丽而虚缈之花">
+                    <div class="daily-info">
+                        <div class="daily-name">🌸 美丽而虚缈之花</div>
+                        <div class="daily-price">￥66</div>
+                        <button class="daily-order-btn">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第二行：两个商品并排 -->
+        <div class="daily-row daily-row-second">
+            <div class="daily-card daily-card-medium">
+                <img src="images/返老还童的灵药.png" alt="返老还童的灵药">
+                <div class="daily-info">
+                    <div class="daily-name">⚗️ 返老还童的灵药</div>
+                    <div class="daily-price">￥999</div>
+                    <button class="daily-order-btn">加入购物车</button>
+                </div>
+            </div>
+            <div class="daily-card daily-card-medium">
+                <img src="images/殴打券.png" alt="殴打券">
+                <div class="daily-info">
+                    <div class="daily-name">👊 殴打券</div>
+                    <div class="daily-price">￥5</div>
+                    <button class="daily-order-btn">加入购物车</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- 👇 娱乐商品（同人志/游戏）区域 👇 -->
+    <div class="entertainment-goods">
+        <div class="entertainment-title">🎮 娱乐商品·同人志专区 🎴</div>
+        
+        <!-- 第一行：左边大图 -->
+        <div class="entertainment-row entertainment-row-first">
+            <!-- 左边大图：迦勒底尽享游戏～与阿尔托莉雅小姐玩耍～ -->
+            <div class="entertainment-card entertainment-card-large">
+                <img src="images/迦勒底尽享游戏_～与阿尔托莉雅小姐玩耍～.png" alt="迦勒底尽享游戏～与阿尔托莉雅小姐玩耍～">
+                <div class="entertainment-info">
+                    <div class="entertainment-name">🎮 迦勒底尽享游戏<br>～与阿尔托莉雅小姐玩耍～</div>
+                    <div class="entertainment-type">【游戏软件】</div>
+                    <div class="entertainment-desc">与阿尔托莉雅小姐一起享受游戏的乐趣！</div>
+                    <div class="entertainment-price">￥158 <span class="entertainment-origin-price">￥198</span></div>
+                    <button class="entertainment-order-btn">加入购物车</button>
+                </div>
+            </div>
+            
+            <!-- 右边两个小图 -->
+            <div class="entertainment-small-group">
+                <div class="entertainment-card entertainment-card-small">
+                    <img src="images/小艾_红豆馅_写真集.png" alt="小艾_红豆馅_写真集">
+                    <div class="entertainment-info">
+                        <div class="entertainment-name">📖 小艾·红豆馅 写真集</div>
+                        <div class="entertainment-type">【同人志】</div>
+                        <div class="entertainment-price">￥68</div>
+                        <button class="entertainment-order-btn">加入购物车</button>
+                    </div>
+                </div>
+                <div class="entertainment-card entertainment-card-small">
+                    <img src="images/泡影－Phantasma－莫德雷德写真集.png" alt="泡影－Phantasma－莫德雷德写真集">
+                    <div class="entertainment-info">
+                        <div class="entertainment-name">📸 泡影－Phantasma－<br>莫德雷德写真集</div>
+                        <div class="entertainment-type">【写真集】</div>
+                        <div class="entertainment-price">￥78</div>
+                        <button class="entertainment-order-btn">加入购物车</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第二行：两个商品并排 -->
+        <div class="entertainment-row entertainment-row-second">
+            <div class="entertainment-card entertainment-card-medium">
+                <img src="images/阿尔托莉雅梁山泊.png" alt="阿尔托莉雅梁山泊">
+                <div class="entertainment-info">
+                    <div class="entertainment-name">⚔️ 阿尔托莉雅梁山泊</div>
+                    <div class="entertainment-type">【同人志】</div>
+                    <div class="entertainment-desc">阿尔托莉雅们的集结！</div>
+                    <div class="entertainment-price">￥55</div>
+                    <button class="entertainment-order-btn">加入购物车</button>
+                </div>
+            </div>
+            <div class="entertainment-card entertainment-card-medium">
+                <img src="images/喜欢拉面的阿纳斯塔西娅小姐.png" alt="喜欢拉面的阿纳斯塔西娅小姐">
+                <div class="entertainment-info">
+                    <div class="entertainment-name">🍜 喜欢拉面的阿纳斯塔西娅小姐</div>
+                    <div class="entertainment-type">【同人志】</div>
+                    <div class="entertainment-desc">皇女的拉面探险之旅</div>
+                    <div class="entertainment-price">￥48</div>
+                    <button class="entertainment-order-btn">加入购物车</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- 👇 帖子板块 👇 -->
+    <div class="posts-section">
+        <div class="posts-title">📝 迦勒底热门帖子 📝</div>
+        
+        <div class="posts-list" id="postsList">
+            <!-- 帖子列表将通过 JavaScript 动态生成 -->
+        </div>
+        
+        <!-- 帖子内容弹窗 -->
+        <div id="postModal" class="post-modal">
+            <div class="post-modal-content">
+                <div class="post-modal-header">
+                    <h3 id="modalTitle"></h3>
+                    <span class="post-modal-close" onclick="closePostModal()">&times;</span>
+                </div>
+                <div class="post-modal-body" id="modalContent">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 滚动报幕脚本
+        const tickerContent = document.getElementById('tickerContent');
+        const tickerContainer = document.querySelector('.ticker-container');
+        
+        let speed = 1.5;
+        let currentPosition = 0;
+        let animationId = null;
+        let isScrolling = true;
+        
+        let contentWidth = tickerContent.scrollWidth;
+        let containerWidth = tickerContainer.clientWidth;
+        
+        currentPosition = containerWidth;
+        tickerContent.style.transform = `translateX(${currentPosition}px)`;
+        
+        function scrollNews() {
+            if (!isScrolling) return;
+            currentPosition -= speed;
+            if (currentPosition <= -contentWidth) {
+                currentPosition = containerWidth;
+            }
+            tickerContent.style.transform = `translateX(${currentPosition}px)`;
+            animationId = requestAnimationFrame(scrollNews);
+        }
+        
+        window.addEventListener('resize', function() {
+            contentWidth = tickerContent.scrollWidth;
+            containerWidth = tickerContainer.clientWidth;
+            if (currentPosition <= -contentWidth) {
+                currentPosition = containerWidth;
+                tickerContent.style.transform = `translateX(${currentPosition}px)`;
+            }
+        });
+        
+        tickerContainer.addEventListener('mouseenter', function() {
+            isScrolling = false;
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+        });
+        
+        tickerContainer.addEventListener('mouseleave', function() {
+            if (!isScrolling) {
+                isScrolling = true;
+                animationId = requestAnimationFrame(scrollNews);
+            }
+        });
+        
+        animationId = requestAnimationFrame(scrollNews);
+        
+        // 轮播图脚本
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const wrapper = document.getElementById('carouselWrapper');
+        const totalSlides = slides.length;
+        
+        // 添加循环克隆（可选，实现无缝轮播）
+        if (totalSlides > 1) {
+            // 克隆第一张和最后一张实现无缝循环
+            const firstClone = slides[0].cloneNode(true);
+            const lastClone = slides[totalSlides - 1].cloneNode(true);
+            wrapper.appendChild(firstClone);
+            wrapper.insertBefore(lastClone, slides[0]);
+            
+            // 重新获取slides
+            const newSlides = document.querySelectorAll('.carousel-slide');
+            const newTotalSlides = newSlides.length;
+            
+            // 设置初始位置到真正的第一张
+            wrapper.style.transform = `translateX(-100%)`;
+            currentSlide = 1;
+            
+            function nextSlide() {
+                currentSlide++;
+                wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+                wrapper.style.transition = 'transform 0.5s ease-in-out';
+                
+                // 到达克隆的末尾时，瞬间跳回
+                if (currentSlide === newTotalSlides - 1) {
+                    setTimeout(() => {
+                        wrapper.style.transition = 'none';
+                        currentSlide = 1;
+                        wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+                        setTimeout(() => {
+                            wrapper.style.transition = 'transform 0.5s ease-in-out';
+                        }, 50);
+                    }, 500);
+                }
+                
+                // 到达开头的克隆时，瞬间跳回
+                if (currentSlide === 0) {
+                    setTimeout(() => {
+                        wrapper.style.transition = 'none';
+                        currentSlide = newTotalSlides - 2;
+                        wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+                        setTimeout(() => {
+                            wrapper.style.transition = 'transform 0.5s ease-in-out';
+                        }, 50);
+                    }, 500);
+                }
+            }
+            
+            setInterval(nextSlide, 3000);
+        } else {
+            // 只有一张图片时，不轮播
+            setInterval(nextSlide, 3000);
+        }
+
+            // ========== 帖子板块数据 ==========
+    // 帖子数据数组
+    const postsData = [
+        {
+            id: 1,
+            title: "【求助帖】只是有点、有点在意的人而已！",
+            summary: "热门评论：噢噢噢噢——！这就是傲娇吧",
+            content: "首先感谢迦勒底还有这么个平台能供我诉说心事，不，其实也不算是心事啦。总而言之，事情的开端是某天早上，我像往常一样从房间里出来，正打算喝杯红茶并品鉴下新出的点心。这时，我看到那个人也在走廊里，他自然地冲着我微笑，我当然并没有感到什么害羞啊、什么爱慕之情，这种东西怎么可能产生嘛！一想到他的那张脸，我就觉得心烦！不过，还是说的有些过火了呢。咳咳，总之回到正题吧，不知道迦勒底的各位豪杰碰到这种情况会如何应对呢？每天这样应对那个人实在让我烦心，恳请各位能给出一些建议。......还有，嘛，快要夏天了嘛...就是说在泳衣方面的挑选也请多多指教了。虽然两个请求同时发表在一个帖子上，但是啊，绝对没任何关联噢！\n\n📸 附：被采纳建议会赏1000万QP\n\n再次麻烦大家了",
+            author: "卫宫士郎",
+            date: "2024-05-20",
+            likes: 1000,
+            comments: 520
+        },
+        {
+            id: 2,
+            title: "【攻略分享】如何快速刷满羁绊值？我的心得",
+            summary: "从零开始，两周羁绊10达成！",
+            content: "大家好，我是迦勒底的老御主了。今天分享下我的刷羁绊经验：\n\n1. 优先选择「迦勒底之门」的日常本\n2. 带上增加羁绊的礼装「午餐时光」\n3. 利用活动期间的加成\n4. 后排放置想要练羁绊的从者\n\n目前我已经刷满了5个从者的羁绊10，欢迎大家交流心得！",
+            author: "攻略达人·织田",
+            date: "2024-05-18",
+            likes: 342,
+            comments: 56
+        },
+        {
+            id: 3,
+            title: "【考据】从者的宝具名称来源，你都知道几个？",
+            summary: "深入分析Fate系列宝具的命名考据",
+            content: "今天来给大家科普一下从者们的宝具名称来源：\n\n• 阿尔托莉雅的「誓约胜利之剑(Excalibur)」—— 来自亚瑟王传说\n• 吉尔伽美什的「王之财宝(Gate of Babylon)」—— 巴比伦神话\n• 库·丘林的「刺穿死棘之枪(Gae Bolg)」—— 凯尔特神话\n\n你还想知道哪些从者的宝具考据？留言告诉我！",
+            author: "迦勒底图书馆",
+            date: "2024-05-15",
+            likes: 278,
+            comments: 42
+        },
+        {
+            id: 4,
+            title: "【绘画】画了玛修的新衣服，大家觉得怎么样？",
+            summary: "自绘迦勒底制服·夏日限定版",
+            content: "最近天气热了，给玛修画了一套夏日制服！\n\n（图片：玛修夏日服设计图）\n\n灵感来源于海边的浪花和盾牌的纹路。\n希望大家喜欢！\n\nPS：下次画谁好呢？评论区告诉我～",
+            author: "画师·虚数之海",
+            date: "2024-05-12",
+            likes: 521,
+            comments: 89
+        },
+        {
+            id: 5,
+            title: "【求助】卡在巴比伦尼亚第21节了，求支援！",
+            summary: "已经尝试了10次都打不过提亚马特...",
+            content: "如题，我的队伍配置：\n- 玛修（Lv80）\n- 吉尔伽美什（Lv90）\n- 支援找的梅林\n- 后备：贞德、阿拉什、学妹\n\n每次打到最后一管血就被团灭了，求大佬推荐阵容！\n\n或者有哪位御主能把强力从者挂支援位吗？万分感谢！",
+            author: "萌新御主·藤丸",
+            date: "2024-05-10",
+            likes: 89,
+            comments: 67
+        },
+        {
+            id: 6,
+            title: "【活动预告】夏日泳装活动即将开启！",
+            summary: "官方消息：新的泳装从者即将登场",
+            content: "据迦勒底官方消息，今年的夏日泳装活动将于下周五开启！\n\n🌟 预计新从者：\n- ★5 泳装阿尔托莉雅\n- ★4 泳装玛修\n- ★4 泳装尼禄\n\n🎁 登录奖励：\n活动期间每日登录送圣晶石×3\n\n准备好你们的圣晶石了吗？",
+            author: "迦勒底情报局",
+            date: "2024-05-08",
+            likes: 634,
+            comments: 128
+        }
+    ];
+
+    // 生成帖子列表HTML
+    function renderPostsList() {
+        const postsList = document.getElementById('postsList');
+        if (!postsList) return;
+        
+        let html = '';
+        postsData.forEach(post => {
+            html += `
+                <div class="post-card" data-id="${post.id}">
+                    <div class="post-card-header">
+                        <h3 class="post-title">${post.title}</h3>
+                        <span class="post-likes">❤️ ${post.likes}</span>
+                    </div>
+                    <div class="post-summary">${post.summary}</div>
+                    <div class="post-meta">
+                        <span>✍️ ${post.author}</span>
+                        <span>📅 ${post.date}</span>
+                        <span>💬 ${post.comments} 条评论</span>
+                    </div>
+                    <button class="view-post-btn" onclick="viewPost(${post.id})">📖 阅读全文</button>
+                </div>
+            `;
+        });
+        postsList.innerHTML = html;
+    }
+
+    // 查看帖子内容
+    function viewPost(postId) {
+        const post = postsData.find(p => p.id === postId);
+        if (!post) return;
+        
+        // 设置弹窗内容
+        document.getElementById('modalTitle').innerHTML = post.title;
+        
+        // 格式化内容（保留换行）
+        const contentHtml = `
+            <div class="post-detail-meta">
+                <span>✍️ 作者：${post.author}</span>
+                <span>📅 发布时间：${post.date}</span>
+                <span>❤️ 点赞：${post.likes}</span>
+                <span>💬 评论：${post.comments}</span>
+            </div>
+            <div class="post-detail-content">
+                ${post.content.replace(/\n/g, '<br>')}
+            </div>
+            <div class="post-detail-footer">
+                <button class="like-btn" onclick="likePost(${post.id})">👍 点赞</button>
+                <button class="back-btn" onclick="closePostModal()">关闭</button>
+            </div>
+        `;
+        
+        document.getElementById('modalContent').innerHTML = contentHtml;
+        
+        // 显示弹窗
+        document.getElementById('postModal').style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    // 点赞功能
+    function likePost(postId) {
+        const post = postsData.find(p => p.id === postId);
+        if (post) {
+            post.likes++;
+            viewPost(postId); // 刷新弹窗内容
+            renderPostsList(); // 刷新列表中的点赞数
+        }
+    }
+
+    // 关闭弹窗
+    function closePostModal() {
+        document.getElementById('postModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // 点击弹窗外部关闭
+    window.onclick = function(event) {
+        const modal = document.getElementById('postModal');
+        if (event.target === modal) {
+            closePostModal();
+        }
+    }
+
+    // 初始化帖子板块
+    renderPostsList();
+
+        // ========== 作战任务板块折叠功能 ==========
+    const missionHeader = document.getElementById('missionHeader');
+    const missionDetail = document.getElementById('missionDetail');
+    const collapseIcon = document.getElementById('collapseIcon');
+    
+    let isExpanded = false;
+    
+    function toggleMission() {
+        if (isExpanded) {
+            // 收起
+            missionDetail.style.maxHeight = '0';
+            missionDetail.style.opacity = '0';
+            missionDetail.style.marginTop = '0';
+            missionDetail.style.paddingTop = '0';
+            setTimeout(() => {
+                missionDetail.style.display = 'none';
+            }, 300);
+            collapseIcon.style.transform = 'rotate(0deg)';
+            isExpanded = false;
+        } else {
+            // 展开
+            missionDetail.style.display = 'block';
+            setTimeout(() => {
+                missionDetail.style.maxHeight = missionDetail.scrollHeight + 'px';
+                missionDetail.style.opacity = '1';
+                missionDetail.style.marginTop = '20px';
+            }, 10);
+            collapseIcon.style.transform = 'rotate(180deg)';
+            isExpanded = true;
+        }
+    }
+    
+    missionHeader.addEventListener('click', toggleMission);
+
+
+    </script>
+</body>
+</html>
